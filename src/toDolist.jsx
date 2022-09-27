@@ -1,16 +1,24 @@
-import React from 'react';
-const toDolist = (props) => {
+import React from 'react'
 
-  const deleteItems = () =>{
-    console.log("deleted");
-  }
-  return(
+import Button from '@mui/material/Button';
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+
+const Todolist = () => {
+  return (
     <>
-    <div className='todo_style'>
-    <i class="fa fa-times" aria-hidden="true"onClick={deleteItems}/>
-    <li>{props.text}</li>
-    </div>
+      <div className='main_div'>
+      <div className='center_div'>
+      <br/>
+      <h1>ToDO List</h1>
+      <br/>
+
+      <input type='text' placeholder='add an item'/>
+      <Button className='newBtn'>
+        <AddCircleIcon/>
+      </Button>
+      </div>
+      </div>
     </>
   );
 };
-export default toDolist;
+export default Todolist;
