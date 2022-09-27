@@ -32,8 +32,8 @@ return [...prevValue, item];
       </Button>
       <br/>
       <ol>
-        {newitem.map((val) =>{
-          return <ListComp text={val}/>;
+        {newitem.map((val,index) =>{
+          return <ListComp key ={index} text={val}/>;
         })}
       </ol>
       <br/>
